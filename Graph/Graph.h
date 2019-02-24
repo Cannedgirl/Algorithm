@@ -8,8 +8,8 @@ class Graph
 private:
 	int numV; 
 	int numE;
-	int **adjMatrix; //ÁÚ½Ó¾ØÕó
-	adjList *AdjList;  //ÁÚ½Ó±í
+	int **adjMatrix; 
+	adjList *AdjList;  
 	DepthFirstPaths dfp;
 	BreadthFirstPaths bfp;
 	ConnectedComponents cc;
