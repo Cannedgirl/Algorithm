@@ -5,13 +5,13 @@ struct edgeNode
 {
 	int edge_v;
 	edgeNode *next;
-};  //±ß±í
+};  
 
 struct adjList
 {
 	int v;
 	edgeNode *firstedge;
-}; //¶¥µã±í
+}; 
 
 struct DepthFirstPaths
 {
