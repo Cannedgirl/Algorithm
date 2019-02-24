@@ -33,6 +33,7 @@ struct ConnectedComponents
 	int *id;
 };
 
+//Topological sort
 struct DepthFirstOrder
 {
 	bool *marked;
