@@ -1,22 +1,29 @@
  vector<int> findDuplicates(vector<int>& nums) {
-   vector<int >results;
-	for (int i = 0; i < nums.size(); i++)
-	{
-        int j = i + 1;
-		while (nums[i] != j&&nums[i]!=-1 )
-		{
-			int num = nums[i];
-			if (nums[num-1] == -1)
-				break;
-			else if (nums[num - 1] == num)
-			{
-				results.push_back(num);
-				nums[num - 1] = -1;
-                break;
-			}
-			nums[i] = nums[num - 1];
-			nums[num - 1] = num;
-		}
-	}
-	return results;
-    }
+        vector<int>results;
+        int i = 0;
+        while(i<nums.size())
+        {
+            int val = nums[i];
+            if(val==(i+1)||val==-1)
+            {
+                i++;
+                continue;
+            }
+            else
+            {
+                if(nums[val-1]==val)
+                {
+                    results.push_back(val);
+                    nums[val-1]=-1;
+                    i++;
+                    
+                }
+                else{
+                    int temp = nums[val-1];
+                    nums[val-1]=val;
+                    nums[i]=temp;
+                }
+            }
+        }
+        return results;
+ }
